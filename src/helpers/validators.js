@@ -16,7 +16,6 @@
 import {
   all,
   allPass,
-  anyPass,
   complement,
   compose,
   converge,
@@ -57,29 +56,29 @@ const isGreen = equals(COLORS.GREEN);
 const isWhite = equals(COLORS.WHITE);
 
 const isNotRed = complement(isRed);
-const isNotBlue = complement(isBlue);
-const isNotOrange = complement(isOrange);
-const isNotGreen = complement(isGreen);
+// const isNotBlue = complement(isBlue);
+// const isNotOrange = complement(isOrange);
+// const isNotGreen = complement(isGreen);
 const isNotWhite = complement(isWhite);
 
 const getColorsCountObj = compose(countBy(identity), values);
 
 const getRed = prop([COLORS.RED]);
 const getBlue = prop([COLORS.BLUE]);
-const getOrange = prop([COLORS.ORANGE]);
+// const getOrange = prop([COLORS.ORANGE]);
 const getGreen = prop([COLORS.GREEN]);
 const getWhite = prop([COLORS.WHITE]);
 
 const countRed = compose(defaultToZero, getRed, getColorsCountObj);
 const countBlue = compose(defaultToZero, getBlue, getColorsCountObj);
-const countOrange = compose(defaultToZero, getOrange, getColorsCountObj);
+// const countOrange = compose(defaultToZero, getOrange, getColorsCountObj);
 const countGreen = compose(defaultToZero, getGreen, getColorsCountObj);
 const countWhite = compose(defaultToZero, getWhite, getColorsCountObj);
 
-const getCircle = prop([SHAPES.CIRCLE]);
+// const getCircle = prop([SHAPES.CIRCLE]);
 const getSquare = prop([SHAPES.SQUARE]);
 const getTriangle = prop([SHAPES.TRIANGLE]);
-const getStar = prop([SHAPES.STAR]);
+// const getStar = prop([SHAPES.STAR]);
 
 const isTriangleGreen = propEq(SHAPES.TRIANGLE, COLORS.GREEN);
 
